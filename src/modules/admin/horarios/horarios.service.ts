@@ -1,21 +1,20 @@
+import { horariosRepository } from "./horarios.repository";
 import { HorarioTienda } from "./horarios.types";
 
 
-export class RolesService {
+export class HorariosService {
 
-    // CORRECCIÓN 1: Cambiar el tipo de retorno a Promise<RolUsu[]>
-    async getRoles(): Promise<HorarioTienda[]> {
+    async getHorarios(): Promise<HorarioTienda[]> {
 
-        const horarios = await rolesRepository.getRolesUsuario();
+        const horarios = await horariosRepository.getHorariosTiendas();
         return horarios || [];
     }
 
-    async getRolById(rolId: number): Promise<HorarioTienda | null> {
-        const horarios = await rolesRepository.getRolesUsuario();
-        const rol = horarios.find(r => r.rol_id === rolId);
-        return rol || null;
+    async getHorariosTienda(horarioId: number): Promise<HorarioTienda[]> {
+        const horarios = await horariosRepository.getHorarioTienda(horarioId);
+        return horarios || [];
     }
 
 }
 
-export const rolesService = new RolesService();
+export const horariosService = new HorariosService();

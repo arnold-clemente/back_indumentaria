@@ -1,5 +1,5 @@
 export interface HorarioTienda {
     horario_id: number;
-    nombre: string | null;
+    dia: string | null;
     estado: number;
 }

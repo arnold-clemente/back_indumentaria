@@ -1,7 +1,8 @@
 import { Response } from 'express';
 import { AuthRequest } from '../../../middleware/auth.middleware';
+import { horariosService } from './horarios.service';
 
-export const horariosTiendasController = async (
+export const horariosController = async (
     req: AuthRequest,
     res: Response
 ) => {
@@ -13,7 +14,7 @@ export const horariosTiendasController = async (
             });
         }
 
-        const horarios = await rolesService.getRoles();
+        const horarios = await horariosService.getHorarios();
 
         if (!horarios) {
             return res.status(404).json({
