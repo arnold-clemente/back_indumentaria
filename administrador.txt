@@ -1,0 +1,10 @@
+{
+  "nombres": "Administrador",
+  "paterno": "Super",
+  "materno": "Usuario",
+  "ci": "532301784",
+  "correo": "administrador@admin.com",
+  "usuario": "administrador",
+  "password": "3g('57EA&0P,",
+  "celular": "62338974"
+}
